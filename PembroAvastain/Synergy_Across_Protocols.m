@@ -1,12 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                                       %
 % (10/5/22: JG) Pareto front across protocols (days between doses)      %
-% - I realized I couldn't just repeat the multi-objective synergy       %
-%   optimization over protocol space, as synergy of potency needs to be %
-%   computed over dosing space                                          %
-% - Instead, I modified the main code so the analysis can be done for   %
-%   any protocol (that is, any separation of drug1 and drug2). Then, in %
-%   the ForCluster folder, I created an m-file for each protocol I want %
+% - Modification of the main code which gives drugs Q3D so the analysis %
+%   can be done for any protocol (that is, any separation of drug1 and  %
+%   drug2).                                                             %
+% - In the ForCluster folder, created an m-file for each protocol       %
 %   to analyze. Here, that allows for dose of each drug to be separated %
 %   by 1 to 5 days. So there are 25 different protocols to consider.    %
 % - The entire multi-objective synergy is performed by running each     %
