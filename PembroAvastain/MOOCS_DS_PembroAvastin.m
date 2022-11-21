@@ -62,22 +62,13 @@
 %   doses on each Pareto front, and a list of all doses that appear on  %
 %   multiple Pareto fronts                                              %
 % - Run time (num_pts = 30, cell line = 2): 7450.287158 seconds         %
-% - Updates on 10/5:                                                    %
-%   1) Include experimental combination dose on heatmap that shows the  %
-%      Pareto optimal doses. For H1299, had to expand max monotherapy   %
-%      range to EC66 from EC60, or else experimental dose was not in    %
-%      dose range considered.                                           %
-%   2) Introduce variables d1_spacing and d2_spacing so can repeat      %
-%      analysis for other protocols                                     %
+%                                                                       %
 %% - The code is readily adaptable to other models. User would need to %%
 %   appropriately modify set_parameters_IC_protocol() to define the     %
 %   model parameters, initial conditions, and dosing protocol. User     %
 %   would also need to determine the range of doses to consider for     %
 %   thier model. Finally, the user needs to ensure their code that      %
 %   solves the DE just returns the tumor size at the final time point.  %
-%   If all these elements are in place, all the combination indices     %
-%   will automatically be computed, and the plots will all be made.     %
-%   As of 10/5 update, also can modify spacing of doses.                %
 %                                                                       %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
