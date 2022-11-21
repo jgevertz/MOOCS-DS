@@ -41,12 +41,6 @@
 % - All output is written to PointsOnPareto, including a list of all    %
 %   doses on each Pareto front, and a list of all doses that appear on  %
 %   multiple Pareto fronts                                              %
-% - Run time with num_pts = 30: 296 sec                                 %
-% - 9/5: changed "dose range" so monotherapy for each drug loops over   %
-%   EC5 to EC85. Change LSD metric to relative LSD (each dose is        %
-%   normalized relative to its EC50 to get a more reasonable metric     %
-%   than simply adding doses                                            %
-%   - Rum time (num_pts = 50): Elapsed time is 1145.995614 seconds.     %
 %                                                                       %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
