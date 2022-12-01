@@ -35,15 +35,14 @@ d1_experiment = 10; % actual dose of drug 1
 d2_experiment = 1; % actual dose of drug 2
 font = 'Arial';
 if(cell_line == 1)
-    path = 'ForCluster/CellLine1_H1299/'; 
-    %path = 'ForCluster/Test/'; 
+    path = 'CellLine1_H1299/'; 
 elseif(cell_line == 2)
-    path = 'ForCluster/CellLine2_A549/'; 
+    path = 'CellLine2_A549/'; 
 else
     fprintf('Can only enter 1 or 2 for cell line - exiting\n'); 
     stop 
 end
-s = [path 'Output_1_1/output1_1.mat']; 
+s = [path 'output1_1.mat']; 
 load(s); 
 num_pts = length(drug1);
 min_d1 = min(drug1,[],'all');
@@ -63,8 +62,7 @@ for i = 1:length(spacing)
         else
             clear onPareto_Loewes_Bliss onPareto_Loewes_HSA ...
                   onPareto_LSD_Bliss onPareto_LSD_HSA; 
-            s = [path 'Output_' num2str(spacing(i)) '_' num2str(spacing(j))...
-                '/output' num2str(spacing(i)) '_' num2str(spacing(j)) '.mat'];
+            s = [path 'output' num2str(spacing(i)) '_' num2str(spacing(j)) '.mat'];
             load(s);
         end
         onPareto_Loewes_Bliss_all{count} = onPareto_Loewes_Bliss; 
@@ -76,7 +74,7 @@ for i = 1:length(spacing)
 end
 
 clear TGI_combo
-s = [path 'Output_3_3/output3_3.mat']; 
+s = [path 'output3_3.mat']; 
 load(s); % This way plots show TGI_combo from experimental protocol
 onPareto_Loewes_Bliss_acrossProtocols = zeros(length(d1),length(d2));
 onPareto_Loewes_HSA_acrossProtocols = zeros(length(d1),length(d2));
