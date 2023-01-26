@@ -11,14 +11,13 @@ d2_experiment = 1; % actual dose of drug 2
 font = 'Arial';
 if(cell_line == 1)
     path = 'CellLine1_H1299/'; 
-    %path = 'ForCluster/Test/'; 
 elseif(cell_line == 2)
     path = 'CellLine2_A549/'; 
 else
     fprintf('Can only enter 1 or 2 for cell line - exiting\n'); 
     stop 
 end
-s = [path 'Output_1_1/output1_1.mat']; 
+s = [path 'output1_1.mat']; 
 load(s); 
 
 cmap = copper(length(spacing)*length(spacing));
@@ -30,8 +29,7 @@ for i = 1:length(spacing)
             % Do nothing
         else
             clear pareto_HSALSD_LSD_plot pareto_HSALSD_HSA_plot; 
-            s = [path 'Output_' num2str(spacing(i)) '_' num2str(spacing(j))...
-                '/output' num2str(spacing(i)) '_' num2str(spacing(j)) '.mat'];
+            s = [path 'output' num2str(spacing(i)) '_' num2str(spacing(j)) '.mat'];
             load(s);
         end
         if j == 1
@@ -63,7 +61,7 @@ legend('Location','NorthEast','FontSize',14,'NumColumns',3)
 xlabel('Synergy of potency: CI(LSD)','FontSize',16); % objective function 2
 ylabel('Synergy of efficacy: CI(HSA)','FontSize',16); % objective function 1
 
-s = [path 'Output_1_2/output1_2.mat']; 
+s = [path 'output1_2.mat']; 
 load(s); 
 num_pts = length(drug1);
 min_d1 = min(drug1,[],'all');
