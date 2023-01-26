@@ -10,10 +10,10 @@ d1_experiment = 10; % actual dose of drug 1
 d2_experiment = 1; % actual dose of drug 2
 font = 'Arial';
 if(cell_line == 1)
-    path = 'Pembro_Bevacizumab/ForCluster_Schedules/CellLine1_H1299/'; 
+    path = 'CellLine1_H1299/'; 
     %path = 'ForCluster/Test/'; 
 elseif(cell_line == 2)
-    path = 'Pembro_Bevacizumab/ForCluster_Schedules/CellLine2_A549/'; 
+    path = 'CellLine2_A549/'; 
 else
     fprintf('Can only enter 1 or 2 for cell line - exiting\n'); 
     stop 
