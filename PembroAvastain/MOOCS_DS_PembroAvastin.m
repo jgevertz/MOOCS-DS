@@ -87,10 +87,10 @@ num_pts = 30; % 30 number of discrete doses to consider over domain of each dose
     set_parameters_ICs_protocol(num_pts); 
 
 if p.cell_line == 1
-    path = 'Pembro_Bevacizumab/Output_H1299_ChangeSearch';
+    path = 'Output_H1299_Test';
     fprintf('Cell line %d = H1299\n',p.cell_line);
 elseif p.cell_line == 2
-    path = 'Pembro_Bevacizumab/Output_A549_ChangeSearch';
+    path = 'Output_A549_Test';
     fprintf('Cell line %d = A549\n',p.cell_line);
 end
 if exist(path, 'dir') ~= 7
